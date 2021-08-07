@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}<img class="hamburguer" src="{{ url_for('static', filename='resources/hamburguesa.svg') }}" alt="hamburguesa.svg">
+            <nav class="menu-navegacion">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicio">Servicios</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#expertos">Especializados</a>
+                <a href="#social-net">Nuestras redes</a>
+            </nav>
+        	<div class="contenedor head">
+        		<h1 class="titulo">Bienvenido a Seutt</h1>
+        		<p class="copy">Esperamos tengas una grata experiencia con nosotros</p>
+        	</div>
+        </header>
+        <div class="container p-5">
+        	<main>
+                <section class="services contenedor" id="servicio">
+                    <h2 class="subtitulo">Nuestro servicio</h2>
+                    <div class="contenedor-servicio">
+                        <img src="{{ url_for('static', filename='resources/checklist.svg') }}" alt="checklist.svg">
+                        <div class="checklist-servicio">
+                            <div class="service">
+                                <h3 class="n-service"><span class="number">1</span>Diseño web</h3>
+                                <p> Idealizamos, diseñamos y programamos sitios web llamativos, modernos, completos, ya sean dinámicos o estáticos según se necesite. </p>
+                            </div>
+                            <div class="service">
+                                <h3 class="n-service"><span class="number">2</span>Posicionamiento de marca</h3>
+                                <p> Te ayudamos a pocisionar tu marca para que puedas competir a la par de tu competencia.</p>
+                            </div>
+                            <div class="service">
+                                <h3 class="n-service"><span class="number">3</span>Marqueting digital y en redes sociales</h3>
+                                <p> Te asesoramos y te entregamos soluciones con respecto cómo vender tu marca y tus productos en redes sociales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="gallery" id="galeria">
+                    <div class="contenedor">
+                        <h2 class="subtitulo">Galeria</h2>
+                        <div class="contenedor-galeria">
+                            <img src="{{ url_for('static', filename='resources/uno.jpg') }}" class="img-galeria" alt="uno.jpg">
+                            <img src="{{ url_for('static', filename='resources/dos.jpg') }}" class="img-galeria" alt="dos.jpg">
+                            <img src="{{ url_for('static', filename='resources/tres.jpg') }}" class="img-galeria" alt="tres.jpg">
+                            <img src="{{ url_for('static', filename='resources/cuatro.jpg') }}" class="img-galeria" alt="cuatro.jpg">
+                            <img src="{{ url_for('static', filename='resources/cinco.jpg') }}" class="img-galeria" alt="cinco.jpg">
+                            <img src="{{ url_for('static', filename='resources/seis.jpg') }}" class="img-galeria" alt="seis.jpg">
+                        </div>
+                    </div>
+                </section>
+                <div class="imagen-light">
+                    <img src="{{ x }}" alt="close.svg" class="close">
+                    <img src="" alt="" class="agregar-imagen">
+                </div>
+                <section class="contenedor" id="expertos">
+                    <h2 class="subtitulo">Expertos en</h2>
+                    <section class="experts">
+                        <div class="cont-expert">
+                            <a href="{{ url_for('analytics') }}"><img src="{{ url_for('static', filename='resources/pie_chart.svg') }}" alt="pie_chart.svg"><h3 class="n-expert">Analíticas</h3></a>
+                        </div>
+                        <div class="cont-expert">
+                            <a href="{{ url_for('seo') }}"><img src="{{ url_for('static', filename='resources/search_engine.svg') }}" alt="search_engine.svg"><h3 class="n-expert">SEO</h3></a>
+                        </div>
+                        <div class="cont-expert">
+                            <a href="{{ url_for('security') }}"><img src="{{ url_for('static', filename='resources/security.svg') }}" alt="security.svg"><h3 class="n-expert">Seguridad informática</h3></a>
+                        </div>
+                    </section>
+                </section>
+            </main>
+        </div>{% endblock %}
